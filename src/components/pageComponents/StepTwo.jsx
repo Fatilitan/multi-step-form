@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import "../../styles/main.scss";
 import { useState } from "react";
+import arcadeIcon from "../../../assets/images/icon-arcade.svg";
+import advancedIcon from "../../../assets/images/icon-advanced.svg";
+import proIcon from "../../../assets/images/icon-pro.svg";
 
 export const StepTwo = ({ clickFn }) => {
   const [paymentPlan, setPaymentPlan] = useState(() => {
@@ -100,10 +103,7 @@ export const StepTwo = ({ clickFn }) => {
                   : "planOption"
               }
             >
-              <img
-                src="../../assets/images/icon-arcade.svg"
-                alt="arcade-icon"
-              />
+              <img src={arcadeIcon} alt="arcade-icon" />
               <div className="planInfo">
                 <h2>Arcade</h2>
                 <p>{paymentPlan === "monthly" ? "$9/mo" : "$90/yr"}</p>
@@ -130,10 +130,7 @@ export const StepTwo = ({ clickFn }) => {
                   : "planOption"
               }
             >
-              <img
-                src="../../assets/images/icon-advanced.svg"
-                alt="arcade-icon"
-              />
+              <img src={advancedIcon} alt="arcade-icon" />
               <div className="planInfo">
                 <h2>Advanced</h2>
                 <p>{paymentPlan === "monthly" ? "$11/mo" : "$110/yr"}</p>
@@ -160,7 +157,7 @@ export const StepTwo = ({ clickFn }) => {
                   : "planOption"
               }
             >
-              <img src="../../assets/images/icon-pro.svg" alt="arcade-icon" />
+              <img src={proIcon} alt="arcade-icon" />
               <div className="planInfo">
                 <h2>Pro</h2>
                 <p>{paymentPlan === "monthly" ? "$13/mo" : "$130/yr"}</p>
