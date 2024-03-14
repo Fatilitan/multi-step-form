@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+$marineBlue: hsl(213, 96%, 18%);
+$purpleBlue: hsl(243, 100%, 62%);
+$pastelBlue: hsl(228, 100%, 84%);
+$lightBlue: hsl(206, 94%, 87%);
+$strawberryRed: hsl(354, 84%, 57%);
+$white: hsl(0, 0%, 100%);
+$coolGray: hsl(231, 11%, 63%);
+$lightGray: hsl(229, 24%, 87%);
+$magnoliaGray: hsl(217, 100%, 97%);
+$alabasterWhite: hsl(231, 100%, 99%);
+$black: #000000;
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}

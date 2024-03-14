@@ -1,0 +1,451 @@
+.rootContainer {
+  background-color: $magnoliaGray;
+  height: 100vh;
+  width: 100%;
+}
+
+.content {
+  height: 100vh;
+  width: 100%;
+}
+
+.sideBar {
+  height: 12rem;
+  background-image: url("../../assets/images/bg-sidebar-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  .stepsContainer {
+    padding-top: 2rem;
+    margin: 0 auto;
+    display: flex;
+    width: 12rem;
+    justify-content: space-between;
+    .steps {
+      .stepsNum {
+        display: block;
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: solid 1.5px $white;
+        border-radius: 50%;
+        span {
+          display: block;
+          color: $white;
+        }
+      }
+      #active {
+        background-color: $lightBlue;
+        border-color: $lightBlue;
+        span {
+          color: $marineBlue;
+        }
+      }
+      h2,
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+.contentBox {
+  width: 90%;
+  background-color: $white;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transform: translateY(-80px);
+  box-shadow: 0px 15px 25px -15px $coolGray;
+  h1 {
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+  p {
+    margin-bottom: 2rem;
+  }
+  form {
+    label {
+      margin-top: 1rem;
+      display: block;
+      transform: translateY(10px);
+    }
+    input {
+      height: 3rem;
+      width: 100%;
+      border: solid 1px $coolGray;
+      border-radius: 4px;
+      padding-left: 1rem;
+      &:focus {
+        outline: 1px solid $purpleBlue;
+        border: 1px solid $purpleBlue;
+      }
+    }
+  }
+}
+
+.contentBox {
+  input[type="radio"],
+  input[type="checkbox"] {
+    display: none;
+  }
+  .invalid {
+    border: solid 1px $strawberryRed;
+  }
+  .planOption {
+    border: solid 1.5px $lightGray;
+    padding: 1rem;
+    display: flex;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    align-content: flex-start;
+    &:hover {
+      border-color: $purpleBlue;
+    }
+    img {
+      height: 40px;
+    }
+    .planInfo {
+      margin-left: 1rem;
+      width: 100%;
+      h2 {
+        font-weight: 600;
+        color: $marineBlue;
+        font-size: 1rem;
+      }
+      p {
+        font-size: 1rem;
+        margin-bottom: 0.4rem;
+        margin-top: 0.4rem;
+      }
+      span {
+        font-weight: 500;
+        font-size: 0.9rem;
+        color: $marineBlue;
+      }
+    }
+  }
+  .selected {
+    border-color: $purpleBlue;
+    background-color: $magnoliaGray;
+  }
+  #selected {
+    border-color: $purpleBlue;
+    background-color: $magnoliaGray;
+  }
+}
+
+.timeSwitch {
+  margin: 2rem auto 0 auto;
+  height: 3rem;
+  border-radius: 8px;
+  background-color: $magnoliaGray;
+  display: flex;
+  align-items: center;
+  .switchContainer {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+  }
+  div {
+    .switch {
+      margin: 0 0.5rem;
+      display: block;
+      width: 40px;
+      height: 20px;
+      position: relative;
+      border-radius: 40px;
+      background-color: $marineBlue;
+      &::before {
+        position: absolute;
+        content: "";
+        background-color: $white;
+        border-radius: 40px;
+        width: 15px;
+        height: 15px;
+        margin: 2.5px;
+        transition: 300ms;
+      }
+    }
+    input:checked + .switch::before {
+      transform: translate(20px);
+    }
+  }
+}
+
+.contentBox {
+  input:checked + .addOnOption {
+    border-color: $purpleBlue;
+    background-color: $magnoliaGray;
+    .check-box-icon {
+      background-color: $purpleBlue;
+      background-image: url("../../assets/images/icon-checkmark.svg");
+      background-size: 60%;
+      background-repeat: no-repeat;
+      background-position: center;
+      border: none;
+    }
+  }
+  .addOnOption {
+    border: solid 1.5px $lightGray;
+    padding: 1rem;
+    display: flex;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: space-between;
+    .planInfo {
+      width: 180px;
+    }
+    h2 {
+      font-size: 1rem;
+      color: $marineBlue;
+    }
+    p {
+      font-size: 0.8rem;
+      margin: 0;
+    }
+    .check-box-icon {
+      font-size: 0;
+      width: 20px;
+      height: 20px;
+      border: solid 1px $lightGray;
+      border-radius: 4px;
+    }
+    span {
+      color: $purpleBlue;
+    }
+  }
+}
+
+.buttonContainer {
+  height: 5rem;
+  position: absolute;
+  bottom: 0;
+  background-color: $white;
+  width: 100%;
+  display: flex;
+  padding: 0 1rem 0 1rem;
+  align-items: center;
+  justify-content: space-between;
+  button {
+    height: 3rem;
+    width: 6rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .forward {
+    background-color: $marineBlue;
+    color: $white;
+  }
+  .backward {
+    background-color: $white;
+    color: $coolGray;
+    &:hover {
+      color: $marineBlue;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.summaryContainer {
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: $magnoliaGray;
+  .planContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    h2 {
+      color: $marineBlue;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+    a {
+      color: $coolGray;
+    }
+    span {
+      font-weight: 600;
+      color: $marineBlue;
+    }
+  }
+  .addOnContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    p {
+      margin-bottom: 0;
+    }
+    span {
+      text-align: right;
+      color: $marineBlue;
+    }
+    & > p {
+      width: 65%;
+      margin-top: 0.5rem;
+    }
+    & > span {
+      width: 35%;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+.totalContainer {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  h2 {
+    color: $coolGray;
+  }
+  span {
+    color: $purpleBlue;
+    font-weight: 600;
+  }
+}
+
+#confirmation {
+  padding: 4rem 1.5rem;
+  img {
+    display: block;
+    width: 4rem;
+    margin: 0 auto;
+  }
+  h1,
+  p {
+    text-align: center;
+  }
+}
+
+#onlyForward {
+  justify-content: right;
+}
+
+#confirm {
+  background-color: $purpleBlue;
+}
+
+@media (min-width: 1000px) {
+  .rootContainer {
+    background-color: $magnoliaGray;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .content {
+    width: 55%;
+    min-width: 900px;
+    max-width: 950px;
+    height: 40rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $white;
+    border-radius: 12px;
+    display: flex;
+    position: relative;
+    padding: 1rem;
+    justify-content: space-between;
+    box-shadow: 0px 15px 25px -15px $coolGray;
+  }
+
+  .sideBar {
+    height: 100%;
+    width: 250px;
+    border-radius: 12px;
+    background-image: url("../../assets/images/bg-sidebar-desktop.svg");
+    .stepsContainer {
+      flex-wrap: wrap;
+      .steps {
+        width: 100%;
+        margin-bottom: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        & > div {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .stepsNum {
+          margin-right: 1rem;
+          & + div {
+            width: 70%;
+          }
+        }
+        .stepsNum + div span,
+        .stepsNum + div h2 {
+          display: inline;
+          width: 100%;
+          height: 1rem;
+        }
+      }
+    }
+  }
+
+  .contentBox {
+    background-color: transparent;
+    box-shadow: none;
+    width: 450px;
+    padding: 0;
+    padding-top: 2rem;
+    transform: translateY(0);
+    margin: 0;
+    margin-right: 6rem;
+    form {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      label {
+        transform: translateY(0);
+        margin-bottom: 0.5rem;
+      }
+      .flexContainer {
+        width: 100%;
+      }
+      .addOnOption {
+        width: 100%;
+        margin-bottom: 0;
+      }
+    }
+    .planOption {
+      width: 9rem;
+      flex-wrap: wrap;
+      height: 174px;
+      .planInfo {
+        margin: 0;
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  .buttonContainer {
+    position: absolute;
+    background-color: transparent;
+    box-shadow: none;
+    width: 450px;
+    padding: 0;
+    right: 0;
+    margin-right: 7rem;
+  }
+
+  #confirmation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    h1,
+    p {
+      width: 100%;
+    }
+  }
+}
